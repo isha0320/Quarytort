@@ -1,0 +1,416 @@
+<html lan="en" and dir="ltr">
+	<head>
+		<meta name="viewport" content="with=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+		<title>
+			Querytort Query
+		</title>
+		<link rel="stylesheet" href="query.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://smtpjs.com/vs/smtp.js"></script>
+<script> src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
+<script src="post.js"></script>
+
+<!--------------------------Scripting----------------------------->
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+                integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+                integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+                crossorigin="anonymous"></script>
+				<script src="query.js"></script>
+	</head>
+	<body>
+		<section class="header">
+				<nav>
+					<a href="front.html"><img src="C:\Users\isha\Desktop\GR-25\IMG_20210522_171358.jpg"></a>
+					<h1 style="color:red;font-family: cursive;font-size:40px;">Querytort</h1>
+					<div class="nav-links" id="navLinks">
+						<i class="fa fa-times" onclick="hideMenu()"></i>
+						<ul type="none">
+							<li><a href="home.html">Home</a></li>
+							<li><a href="query.html">Query</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="signIn.html">Log In</a></li>
+						</ul>
+					</div>
+					<i class="fa fa-bars" onclick="showMenu()"></i>
+                    <div class="text-box">
+                        <h1>QUERY</h1>
+                        <p><span style="color:red;">Asking</span>question is a part of working towards being<span style="color: red;"> successful </span>!</p>
+                    </div>
+					<!----------------Search bar----------------->
+				</nav>
+				<div class="search-box">
+					<div>
+						<select name="" id="">
+							<option value="Everything">Everything</option>
+							<option value="Titles">Titles</option>
+							<option value="Descriptions">Descriptions</option>
+						</select>
+						<input type="text" name="q" placeholder="search ..." required>
+						<button><i class="fa fa-search"></i></button>
+					</div>
+				</div>
+		</section>
+		<!------toggle the menu using js----->
+		<script>
+			var navLinks = document.getElementById("navLinks");
+			function showMenu(){
+				navLinks.style.right="0";
+			}
+			function hideMenu(){
+				navLinks.style.right="-200px";
+			}
+
+		</script>
+        <!----------------------------Query-------------------------------->
+		<section class="query">
+		<div class="container">
+			<div class="subforum">
+				<div class="subforum-title">
+					<h1>General Querys</h1>
+				</div>
+				<div class="subforum-row">
+					<div class="subforum-icon subforum-col center">
+						<i class="fa fa-camera-retro "></i>
+					</div>
+					<div class="subforum-description subforum-col">
+					<h1><a href="">Description title:</a></h1>
+					</div>
+					<div class="subforum-stats subforum-col center">
+						<span>24 posts | 15 Topics </span>
+					</div>
+				
+			
+				</div>
+			
+					<div class ="subforum-info subforum-col">
+						<b><a href="">Last Post</a></b> by <a href="">JustAUser</a>
+						<br>
+						on<small> 21 May 2021</small>
+					</div>
+					<div class="post-content" id="edit-contenttext" contenteditable="true">
+					</div>
+			
+					<button id="like-button" type="button" class="btn btn-danger" onclick="countLikes()"><i
+							class="fa fa-thumbs-up"></i><span id="likeButton">Like</span></button>
+					<div id="showCount">Be the first one to like this</div>
+			
+					<textarea id="comment" rows="4" cols="135" placeholder="Leave a comment..." name="comment"></textarea>
+					<div><button id="comment-button" type="button" class="btn btn-danger"
+							onclick="addComment(comment)">Comment</button></div>
+					<div id="allCommentsHeading">All Comments</div>
+					<div class="comment-container">
+						<div id="comments">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="subforum">
+				<div class="subforum-row">
+					<div class="subforum-icon subforum-col center">
+						<i class="fa fa-camera-retro "></i>
+					</div>
+					<div class="subforum-description subforum-col">
+					<h1><a href="">Description title:</a></h1>
+					<p>Description Container:Info</p></div>
+					<div class="subforum-stats subforum-col center">
+						<span>24 posts | 15 Topics </span>
+					</div>
+					<div class ="subforum-info subforum-col">
+						<b><a href="">Last Post</a></b> by <a href="">JustAUser</a>
+						<br>
+						on<small> 21 May 2021</small>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="subforum">
+				<div class="subforum-title">
+					<h1>General Querys</h1>
+				</div>
+				<div class="subforum-row">
+					<div class="subforum-icon subforum-col center">
+						<i class="fa fa-camera-retro "></i>
+					</div>
+					<div class="subforum-description subforum-col">
+					<h1><a href="">Description title:</a></h1>
+					<p>Description Container:Info</p></div>
+					<div class="subforum-stats subforum-col center">
+						<span>24 posts | 15 Topics </span>
+					</div>
+					<div class ="subforum-info subforum-col">
+						<b><a href="">Last Post</a></b> by <a href="">JustAUser</a>
+						<br>
+						on<small> 21 May 2021</small>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="subforum">
+				<div class="subforum-row">
+					<div class="subforum-icon subforum-col center">
+						<i class="fa fa-camera-retro "></i>
+					</div>
+					<div class="subforum-description subforum-col">
+					<h1><a href="">Description title:</a></h1>
+					<p>Description Container:Info</p></div>
+					<div class="subforum-stats subforum-col center">
+						<span>24 posts | 15 Topics </span>
+					</div>
+					<div class ="subforum-info subforum-col">
+						<b><a href="">Last Post</a></b> by <a href="">JustAUser</a>
+						<br>
+						on<small> 21 May 2021</small>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="subforum">
+				<div class="subforum-row">
+					<div class="subforum-icon subforum-col center">
+						<i class="fa fa-camera-retro "></i>
+					</div>
+					<div class="subforum-description subforum-col">
+					<h1><a href="">Description title:</a></h1>
+					<p>Description Container:Info</p></div>
+					<div class="subforum-stats subforum-col center">
+						<span>24 posts | 15 Topics </span>
+					</div>
+					<div class ="subforum-info subforum-col">
+						<b><a href="">Last Post</a></b> by <a href="">JustAUser</a>
+						<br>
+						on<small> 21 May 2021</small>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="subforum">
+				<div class="subforum-row">
+					<div class="subforum-icon subforum-col center">
+						<i class="fa fa-camera-retro "></i>
+					</div>
+					<div class="subforum-description subforum-col">
+					<h1><a href="">Description title:</a></h1>
+					<p>Description Container:Info</p></div>
+					<div class="subforum-stats subforum-col center">
+						<span>24 posts | 15 Topics </span>
+					</div>
+					<div class ="subforum-info subforum-col">
+						<b><a href="">Last Post</a></b> by <a href="">JustAUser</a>
+						<br>
+						on<small> 21 May 2021</small>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="subforum">
+				<div class="subforum-row">
+					<div class="subforum-icon subforum-col center">
+						<i class="fa fa-camera-retro "></i>
+					</div>
+					<div class="subforum-description subforum-col">
+					<h1><a href="">Description title:</a></h1>
+					<p>Description Container:Info</p></div>
+					<div class="subforum-stats subforum-col center">
+						<span>24 posts | 15 Topics </span>
+					</div>
+					<div class ="subforum-info subforum-col">
+						<b><a href="">Last Post</a></b> by <a href="">JustAUser</a>
+						<br>
+						on<small> 21 May 2021</small>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="subforum">
+				<div class="subforum-row">
+					<div class="subforum-icon subforum-col center">
+						<i class="fa fa-camera-retro "></i>
+					</div>
+					<div class="subforum-description subforum-col">
+					<h1><a href="">Description title:</a></h1>
+					<p>Description Container:Info</p></div>
+					<div class="subforum-stats subforum-col center">
+						<span>24 posts | 15 Topics </span>
+					</div>
+					<div class ="subforum-info subforum-col">
+						<b><a href="">Last Post</a></b> by <a href="">JustAUser</a>
+						<br>
+						on<small> 21 May 2021</small>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="subforum">
+				<div class="subforum-row">
+					<div class="subforum-icon subforum-col center">
+						<i class="fa fa-camera-retro "></i>
+					</div>
+					<div class="subforum-description subforum-col">
+					<h1><a href="">Description title:</a></h1>
+					<p>Description Container:Info</p></div>
+					<div class="subforum-stats subforum-col center">
+						<span>24 posts | 15 Topics </span>
+					</div>
+					<div class ="subforum-info subforum-col">
+						<b><a href="">Last Post</a></b> by <a href="">JustAUser</a>
+						<br>
+						on<small> 21 May 2021</small>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="subforum">
+				<div class="subforum-row">
+					<div class="subforum-icon subforum-col center">
+						<i class="fa fa-camera-retro "></i>
+					</div>
+					<div class="subforum-description subforum-col">
+					<h1><a href="">Description title:</a></h1>
+					<p>Description Container:Info</p></div>
+					<div class="subforum-stats subforum-col center">
+						<span>24 posts | 15 Topics </span>
+					</div>
+					<div class ="subforum-info subforum-col">
+						<b><a href="">Last Post</a></b> by <a href="">JustAUser</a>
+						<br>
+						on<small> 21 May 2021</small>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="subforum">
+				<div class="subforum-row">
+					<div class="subforum-icon subforum-col center">
+						<i class="fa fa-camera-retro "></i>
+					</div>
+					<div class="subforum-description subforum-col">
+					<h1><a href="">Description title:</a></h1>
+					<p>Description Container:Info</p></div>
+					<div class="subforum-stats subforum-col center">
+						<span>24 posts | 15 Topics </span>
+					</div>
+					<div class ="subforum-info subforum-col">
+						<b><a href="">Last Post</a></b> by <a href="">JustAUser</a>
+						<br>
+						on<small> 21 May 2021</small>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="subforum">
+				<div class="subforum-row">
+					<div class="subforum-icon subforum-col center">
+						<i class="fa fa-camera-retro "></i>
+					</div>
+					<div class="subforum-description subforum-col">
+					<h1><a href="">Description title:</a></h1>
+					<p>Description Container:Info</p></div>
+					<div class="subforum-stats subforum-col center">
+						<span>24 posts | 15 Topics </span>
+					</div>
+					<div class ="subforum-info subforum-col">
+						<b><a href="">Last Post</a></b> by <a href="">JustAUser</a>
+						<br>
+						on<small> 21 May 2021</small>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="subforum">
+				<div class="subforum-row">
+					<div class="subforum-icon subforum-col center">
+						<i class="fa fa-camera-retro "></i>
+					</div>
+					<div class="subforum-description subforum-col">
+					<h1><a href="">Description title:</a></h1>
+					<p>Description Container:Info</p></div>
+					<div class="subforum-stats subforum-col center">
+						<span>24 posts | 15 Topics </span>
+					</div>
+					<div class ="subforum-info subforum-col">
+						<b><a href="">Last Post</a></b> by <a href="">JustAUser</a>
+						<br>
+						on<small> 21 May 2021</small>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="subforum">
+				<div class="subforum-row">
+					<div class="subforum-icon subforum-col center">
+						<i class="fa fa-camera-retro "></i>
+					</div>
+					<div class="subforum-description subforum-col">
+					<h1><a href="">Description title:</a></h1>
+					<p>Description Container:Info</p></div>
+					<div class="subforum-stats subforum-col center">
+						<span>24 posts | 15 Topics </span>
+					</div>
+					<div class ="subforum-info subforum-col">
+						<b><a href="">Last Post</a></b> by <a href="">JustAUser</a>
+						<br>
+						on<small> 21 May 2021</small>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!------FOOTER------>
+	<section class="footer">
+			<h4 >Quick Links</h4>
+			<div class="footer-links">
+				<ul type="none">
+					<li><a href="home.html">Home</a></li>
+					<li><a href="query.html">Query</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact Us</a></li>
+				</ul>
+			</div>
+			<div class="icon">
+				<i class="fa fa-facebook"></i>
+				<i class="fa fa-twitter"></i>
+				<i class="fa fa-instagram"></i>
+				<i class="fa fa-linkedin"></i>
+			</div>
+			
+			<p>Created By Menmbers of GR-25 | All rights are reserved</p>
+	</section>
+	<script>
+	</body>
+</html>

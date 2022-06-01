@@ -1,0 +1,103 @@
+<html lan="en" and dir="ltr">
+	<head>
+		<meta name="viewport" content="with=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+		<title>
+			Querytort home
+		</title>
+		<link rel="stylesheet" href="main.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	</head>
+	<body>
+		<section class="header">
+				<nav>
+					<a href="front.html"><img src="C:\Users\isha\Desktop\GR-25\IMG_20210522_171358.jpg"></a>
+					<h1 style="color:red;font-family: cursive;font-size:40px;">Querytort</h1>
+					<div class="nav-links" id="navLinks">
+						<i class="fa fa-times" onclick="hideMenu()"></i>
+						<ul type="none">
+							<li><a href="home.html">Home</a></li>
+							<li><a href="query.html">Query</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="signIn.html">Log In</a></li>
+						</ul>
+					</div>
+					<i class="fa fa-bars" onclick="showMenu()"></i>
+				</nav>
+					<div class="loginBox">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG4c9D0CxIgSHBQFWQBf6albDgQI6v4GqVqrKK4Qb2QN0o-W_9Tw" class="user">
+            <h2 id="log">Log In Home</h2>
+			<form>
+				<p>Username</p>
+            <input type="text" placeholder="Enter Username" required>
+            <p>Email</p>
+            <input type="text" placeholder="Enter Email or Mobile No" required>
+            <p>Password</p>
+            <input type="password" placeholder="Enter Password" required>
+			<p>Confirm Password</p>
+            <input type="password" placeholder="Confirm the Password" required>
+            <button id="btn">Register</button><br>
+            <a href="front.html">Want To Go Back!</a>
+            <a href="signIn.html" style="padding-left:60px">Sign In</a>
+            </form>
+            </div>
+		</section>
+		<!------toggle the menu using js----->
+		<script>
+			var navLinks = document.getElementById("navLinks");
+			function showMenu(){
+				navLinks.style.right="0";
+			}
+			function hideMenu(){
+				navLinks.style.right="-200px";
+			}
+
+		</script>
+	<!------FOOTER------>
+	<section class="footer">
+			<h4 >Quick Links</h4>
+			<div class="footer-links">
+				<ul type="none">
+					<li><a href="home.html">Home</a></li>
+					<li><a href="query.html">Query</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact Us</a></li>
+				</ul>
+			</div>
+			<div class="icon">
+				<i class="fa fa-facebook"></i>
+				<i class="fa fa-twitter"></i>
+				<i class="fa fa-instagram"></i>
+				<i class="fa fa-linkedin"></i>
+			</div>
+			
+			<p>Created By Menmbers of GR-25 | All rights are reserved</p>
+	</section>
+	<script>
+	var input= document.querySelectorAll("input");
+var button = document.querySelector("button");
+button.addEventListener("click",(e)=>{
+    e.preventDefault();
+	var username = input[0].value;
+    var email=input[1].value;
+    var password = input[2].value;
+	var confirm =input[3].value;
+    let patEmail = /^[A-Za-z0-9._-]{3,20}@[A-Za-z0-9]{3,20}[.][A-Za-z.]{3,6}$/;
+    let patPassword =/^(?=.*[A-Z])(?=.*[0-9])(?=.*[#$%&@!])[A-za-z0-9!@#$%^&*]{8,12}$/;
+    if(patEmail.test(email)&&patPassword.test(password)&& username!=" "&&confirm==password ){
+        window.open("home.html");
+		username="";
+		email="";
+		password="";
+		confirm="";
+    }
+    else{
+        alert("Fill all the details!")
+    }
+})
+	</script>
+	</body>
+</html>

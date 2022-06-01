@@ -1,0 +1,173 @@
+<html>
+	<head>
+		<meta name="viewport" content="with=device-width, initial-scale=1.0">
+
+		<title>
+			Querytort home
+		</title>
+		<link rel="stylesheet" href="main.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+	</head>
+	<body>
+		<section class="header">
+				<nav>
+					<a href="front.html"><img src="C:\Users\isha\Desktop\GR-25\IMG_20210522_171358.jpg"></a>
+					<h1 style="color:red;font-family: cursive;font-size:40px;">Querytort</h1>
+					<div class="nav-links" id="navLinks">
+						<i class="fa fa-times" onclick="hideMenu()"></i>
+						<ul type="none">
+							<li><a href="home.html">Home</a></li>
+							<li><a href="query.html">Query</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="signIn.html">Log In</a></li>
+						</ul>
+					</div>
+					<form>
+
+					</form>
+					<i class="fa fa-bars" onclick="showMenu()"></i>
+				</nav>
+				<div class="text-box">
+					<h1>HOME</h1>
+					<p><span style="color:red;">Mistakes</span> might not give the answers.<br> But they give you <span style="color: red;"> question </span>for a greater answer.</p>
+				</div>
+		</section>
+		<!------toggle the menu using js----->
+		<script>
+			var navLinks = document.getElementById("navLinks");
+			function showMenu(){
+				navLinks.style.right="0";
+			}
+			function hideMenu(){
+				navLinks.style.right="-200px";
+			}
+
+		</script>
+		<!-----------Explore------------>
+		<section class="explore">
+			<h1>Explore and Learn</h1>
+			<p>He Who Ask te Question Cannot Avoid The Answer</p>
+				<div class="row">
+					<div class="explore-col">
+					<h3>QUERY</h3>
+					<p><a href="query.html">Asking your Query</a></p>
+					</div>
+					<div class="explore-col">
+					<h3>Explore</h3>
+					<p><a href="query.html">Explore more to learn more</a></p>
+					</div>
+					<div class="explore-col">
+					<h3>Friends</h3>
+					<p><a href="query.html">Interact with others</a></p>
+				    </div>
+				</div>
+		</section>
+		<!-----revievs of the user-->
+
+		<section class="review">
+			<h1>Users Review</h1>
+			<p>Sometimes the Questions are Complicated and the answers are simple</p>
+			<div class="row">
+				<div class="review-col">
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG4c9D0CxIgSHBQFWQBf6albDgQI6v4GqVqrKK4Qb2QN0o-W_9Tw" alt="user1">
+					<div>
+						<p>
+							The Website is great help. I could find the perfect answer  to my query. keep up the good work. Reponse was quite helpfull. 
+						</p>
+						<h3>Astha Sharma</h3>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-o"></i>
+
+					</div>
+				</div>
+
+				<div class="review-col">
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG4c9D0CxIgSHBQFWQBf6albDgQI6v4GqVqrKK4Qb2QN0o-W_9Tw"alt="user1">
+					<div>
+						<p>
+							The Website is great help. Thamks for the help it is appriciated.
+						</p>
+						<h3> Karan Gupta</h3>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-half-o"></i>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+		<!--------------------Features of the website------------------>
+		<section class="features">
+			<h1>Features You May Enjoy </h1>
+			<p>All questions has answers.Don't need to answer all questions<br>They are answersed with time</p>
+			<div class="row">
+				<div class="features-col">
+					<img src="IMG_20210520_220445.jpg">
+					<div class="layer">
+						<h3>Easy to Access</h3><br>
+						<p>User can search there queries as they like. Have discusions till they resolve or get satisfied answers.At the same time interaction with experts can help reduce time wastage. </p>
+					</div>
+				</div>
+				<div class="features-col">
+					<img src="IMG_20210520_220538.jpg">
+					<div class="layer">
+						<h3>Get Answers for free</h3>
+						<br>
+						<p>This website is economical. Easy to use with free services and interaction. LogIn to get the benefits of all the services</p>
+					</div>
+				</div>
+				<div class="features-col">
+					<img src="IMG_20210520_220659.jpg">
+					<div class="layer">
+						<h3>Explore</h3><br>
+						<p>Easy interation can make the learning experience greater. Exploring make one learn more. With a plattform where one can explore and interact with other one can make learning fun. </p>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+
+
+		<!----------call to Action-->
+
+		<section class="cta">
+			<h1>
+				Need Help Get In Touch with us
+			</h1>
+			<a href="contact.html" class="hero-btn">Contact Us</a>
+
+		</section>
+	<!------FOOTER------>
+	<section class="footer">
+			<h4 >Quick Links</h4>
+			<div class="footer-links">
+				<ul type="none">
+					<li><a href="home.html">Home</a></li>
+					<li><a href="query.html">Query</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact Us</a></li>
+				</ul>
+			</div>
+			<div class="icon">
+				<i class="fa fa-facebook"></i>
+				<i class="fa fa-twitter"></i>
+				<i class="fa fa-instagram"></i>
+				<i class="fa fa-linkedin"></i>
+			</div>
+			
+			<p>Created By Menmbers of GR-25 | All rights are reserved</p>
+	</section>
+
+	</body>
+</html>

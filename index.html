@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<meta name="viewport" content="with=device-width, initial-scale=1.0">
+
+		<title>
+			Querytort
+		</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+	</head>
+	<body>
+		<section class="header">
+				<nav>
+					<a href="front.html"><img id="logo" src="C:\Users\isha\Desktop\GR-25\IMG_20210522_171358.jpg"></a>
+					<div class="nav-links" id="navLinks">
+						<i class="fa fa-times" onclick="hideMenu()"></i>
+						<ul type="none">
+							<li><a href="home.html">Home</a></li>
+							<li><a href="query.html">Query</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="signIn.html">Log In</a></li>
+						</ul>
+					</div>
+					<i class="fa fa-bars" onclick="showMenu()"></i>
+				</nav>
+				<div class="text-box">
+					<h1>Querytort</h1>
+					<p><span style="color:red;">Knowledge</span> is having the right answer. <span style="color: red;">Intelligence </span>is asking the right. question</p>
+					<a href="Query.html" class="hero-btn">Explore more learn more</a>
+				</div>
+		</section>
+		<!------toggle the menu using js----->
+		<script>
+			var navLinks = document.getElementById("navLinks");
+			function showMenu(){
+				navLinks.style.right="0";
+			}
+			function hideMenu(){
+				navLinks.style.right="-200px";
+			}
+
+		</script>
+	<!------FOOTER------>
+	<section class="footer">
+			<h4 >Quick Links</h4>
+			<div class="footer-links">
+				<ul type="none">
+					<li><a href="home.html">Home</a></li>
+					<li><a href="query.html">Query</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact Us</a></li>
+				</ul>
+			</div>
+			<div class="icon">
+				<i class="fa fa-facebook"></i>
+				<i class="fa fa-twitter"></i>
+				<i class="fa fa-instagram"></i>
+				<i class="fa fa-linkedin"></i>
+			</div>
+			<p>Created By Menmbers of GR-25|All rights are reserved</p>
+	</section>
+
+	</body>
+</html>

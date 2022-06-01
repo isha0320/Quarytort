@@ -1,0 +1,82 @@
+<html lan="en" and dir="ltr">
+	<head>
+		<meta name="viewport" content="with=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+		<title>
+			Querytort contact
+		</title>
+		<link rel="stylesheet" href="main.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	</head>
+    <body>
+		<section class="header">
+				<nav>
+					<a href="front.html"><img src="C:\Users\isha\Desktop\GR-25\IMG_20210522_171358.jpg"></a>
+					<h1 style="color:red;font-family: cursive;font-size:40px;">Querytort</h1>
+					<div class="nav-links" id="navLinks">
+						<i class="fa fa-times" onclick="hideMenu()"></i>
+						<ul type="none">
+							<li><a href="home.html">Home</a></li>
+							<li><a href="query.html">Query</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="signIn.html">Log In</a></li>
+						</ul>
+					</div>
+					<i class="fa fa-bars" onclick="showMenu()"></i>
+                 </nav>
+                 <div class="loginBox">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG4c9D0CxIgSHBQFWQBf6albDgQI6v4GqVqrKK4Qb2QN0o-W_9Tw" class="user">
+                    <h2 id="log">Contact Us</h2>
+                    <p id="para">Send a message snd we will get back to you within 24 hours</p>
+                    <form>
+                    <p>User Name</p>
+                    <input type="text" placeholder="Enter Username" required>
+                    <p>Email</p>
+                    <input type="text" placeholder="Enter Email" required>
+                    <p>Message</p>
+                    <textarea placeholder="message" required></textarea>
+                    </textarea>
+                    <button  type="submit">Submit</button><br>
+
+                    </form>
+                    </div>
+        </section>
+       
+        <!------toggle the menu using js----->
+		<script>
+			var navLinks = document.getElementById("navLinks");
+			function showMenu(){
+				navLinks.style.right="-10px";
+			}
+			function hideMenu(){
+				navLinks.style.right="-200px";
+			}
+
+		</script>
+	<!------FOOTER------>
+	<section class="footer">
+			<h4 >Quick Links</h4>
+			<div class="footer-links">
+				<ul type="none">
+					<li><a href="home.html">Home</a></li>
+					<li><a href="query.html">Query</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact Us</a></li>
+				</ul>
+			</div>
+			<div class="icon">
+				<i class="fa fa-facebook"></i>
+				<i class="fa fa-twitter"></i>
+				<i class="fa fa-instagram"></i>
+				<i class="fa fa-linkedin"></i>
+			</div>
+			<p>Created By Menmbers of GR-25|All rights are reserved</p>
+	</section>
+    <script src="https://smtpjs.com/vs/smtp.js"></script>
+    <script> src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
+    <script src="contact.js"></script>
+     </body>
+</html>
